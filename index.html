@@ -1,11 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <!-- Daisy ui and tailwind -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google font worksanes-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- font Style -->
+    <style>
+        .font-work{
+            font-family: 'Work Sans', sans-serif;
+        }
+    </style>
+
+    <!-- custom color -->
+    <script>
+    tailwind.config = {
+        theme: {
+         extend: {
+          colors: {
+            'ash': '#11111180',
+            'back-bg': '#F85559',
+            //'pink': '#E527B2',
+          }
+         }
+        }
+    }
+              </script>
+
+    <title>Summer Sale</title>
 </head>
-<body>
-    
+<body class="font-work">
+    <header class="container mt-3 lg:mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 ">
+            <div class="text-center mt-48">
+                <h3 class="mb-12 text-2xl text-black font-semibold">---SALE FEVER---</h3>
+                <h2 class="mb-20 text-6xl text-black font-bold">Purchase TK 200 or <br>above & get 
+                    <span class="text-pink-600">20% off</span></h2>
+                <div class="flex gap-4 place-content-center">
+                    <h3 class="text-2xl text-black font-semibold pt-2">Use Promo Code</h3>
+                    <button class="btn btn-secondary px-3 lg:px-7 text-2xl font-semibold">SELL200</button>
+                </div>
+            </div>
+            <div>
+                <img class="w-11/12 md:w-3/4 mt-8 ml-4 md:mr-4 md:pl-32 lg:ml-0" src="images/Summer 1.png" alt="">
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto">
+        <!-- Sportwear -->
+
+        <div class="flex flex-row">
+            <h1>Sportswear</h1>
+            <div>
+                
+            </div>
+        </div>
+    </main>
 </body>
 </html>
