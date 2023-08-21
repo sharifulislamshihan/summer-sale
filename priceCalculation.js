@@ -42,11 +42,10 @@ function handleClickBtn(target){
     document.getElementById('cupon-btn').addEventListener('click', function(){
         const cuponInputTextString = document.getElementById('cupon-input');
         const cuponInputText = cuponInputTextString.value;
-        const cuponInput = cuponInputText.toLowerCase();
         // calculating discount price
         //20% off
         const discountAmount = parseFloat(total * (20/100)).toFixed(2);
-        if(cuponInput === "sell200"){
+        if(cuponInputText === "SELL200"){
             document.getElementById('discount-price').innerText = discountAmount;
             const grandTotal = parseFloat(total) - parseFloat(discountAmount);
                 // grand total
