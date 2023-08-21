@@ -2,21 +2,6 @@ let total = 0;
 let discountPrice = 0;
 let discountAmount = 0;
 
-function checkInput(mytext, value, mybtn) {
-    // Check if the input value meets your condition (e.g., minimum length)
-    const textInput = document.getElementById(mytext);    
-    const myButton = document.getElementById(mybtn);    
-
-    if (textInput.value.length >= value) {
-      // Enable the button
-      myButton.disabled = false;
-    } else {
-      // Disable the button
-      myButton.disabled = true;
-    }
-  }
-
-
 function handleClickBtn(target){
 
     // making list of the products
@@ -57,17 +42,22 @@ function handleClickBtn(target){
     document.getElementById('cupon-btn').addEventListener('click', function(){
         const cuponInputTextString = document.getElementById('cupon-input');
         const cuponInputText = cuponInputTextString.value;
+        const cuponInput = cuponInputText.toLowerCase();
         // calculating discount price
         //20% off
         const discountAmount = parseFloat(total * (20/100)).toFixed(2);
-        if(cuponInputText === "SELL200"){
+        if(cuponInput === "sell200"){
             document.getElementById('discount-price').innerText = discountAmount;
             const grandTotal = parseFloat(total) - parseFloat(discountAmount);
                 // grand total
             document.getElementById('grand-total').innerText = grandTotal;
             cuponInputTextString.value = '';
         }
-    })
+    }) 
     
-    
+        // back to home
+
+        document.getElementById('home-btn').addEventListener('click', function(){
+            window.location.href = 'index.html';
+        })
 }
